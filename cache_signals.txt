@@ -1,0 +1,21 @@
+LRU array
+load_lru: DP 
+hit: DP
+lru_din: handled in DP and needs to be parameterized
+
+Valid array
+load_valid: control
+d_in: 1'b1
+
+Dirty array
+load_dirty: DP (clear_dirty: )
+din: (set_dirty)? 1 : 0;
+
+tag:
+load_tag: control
+din: DP (address)
+
+data array
+load_data: control
+din: control
+read: read needs to be 1 where there stalling happens.
